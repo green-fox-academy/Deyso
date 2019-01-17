@@ -4,10 +4,12 @@ public class swapNumbers {
         int a = 123;
         int b = 526;
 
-        System.out.println("a = " + (a));
-        System.out.println("b = " + (b));
-        System.out.println("The a was: " + a + " and now  swapd with b " + ((a + b) - a));
-        System.out.println("The b was: " + b + " and now  swapd with a " + ((a + b) - b));
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        System.out.println(a);
+        System.out.println(b);
 
     }
 
