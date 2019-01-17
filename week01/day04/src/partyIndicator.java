@@ -37,10 +37,9 @@ public class partyIndicator {
             System.out.println("Quite cool party");
         } else if ((girls + boys) < 20) {
             System.out.println("Average party...");
-        } else if ((girls == 0) && (girls + boys) >= 20) {
-            System.out.println("Sasuage party");
         }
-        
+
+
     }
 
 }
