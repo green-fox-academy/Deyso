@@ -24,17 +24,17 @@ public class drawDiamond {
         int space = 2;
 
         for (int i = 0; i < num; i++) {
-            for (int k = 0; k < num - i; k++) {
+            for (int j = 0; j < num - i; j++) {
                 System.out.print(" ");
             }
-            for (int j = 0; j <= i; j++) {
+            for (int k = 0; k <= i; k++) {
                 System.out.print("* ");
             }
             System.out.println();
         }
         System.out.print("  ");
-        for (int a = 0; a < num2; a++) {
-            for (int b = 0; b < num2 - a; b++) {
+        for (int l = 0; l < num2; l++) {
+            for (int m = 0; m < num2 - l; m++) {
                 System.out.print("* ");
             }
             space++;
