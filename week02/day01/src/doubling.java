@@ -9,13 +9,13 @@ public class doubling {
         int baseNum = 123;
 
         doubling(baseNum);
-        System.out.println(doubling(baseNum));  
-    }
-    public static int doubling(int atadottElem){
-        int newNum = atadottElem * 2;
-        return newNum;
+        System.out.println(doubling(baseNum));
     }
 
+    public static int doubling(int atadottElem) {
+        atadottElem = atadottElem * 2;
+        return atadottElem;
+    }
 
 
 }
