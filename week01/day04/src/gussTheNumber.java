@@ -13,20 +13,20 @@ public class gussTheNumber {
         // You found the number: 8
 
 
-        int guessdNumber;
+        int guessedNumber;
         int randomNumber = (int) (Math.random() * 50 + 1);
         Scanner input = new Scanner(System.in);
 
-        System.out.println("I tought a number between 0-50. Guess the number : ");
-        guessdNumber = input.nextInt();
+        System.out.println("I thought a number between 0-50. Guess the number : ");
+        guessedNumber = input.nextInt();
 
-        while (guessdNumber != randomNumber) {
-            if (guessdNumber < randomNumber) {
+        while (guessedNumber != randomNumber) {
+            if (guessedNumber < randomNumber) {
                 System.out.println("The number is higher. Guess another one: ");
-                guessdNumber = input.nextInt();
-            } else if (guessdNumber > randomNumber) {
+                guessedNumber = input.nextInt();
+            } else if (guessedNumber > randomNumber) {
                 System.out.println("The number is lower. Guess another one: ");
-                guessdNumber = input.nextInt();
+                guessedNumber = input.nextInt();
             }
 
         }
