@@ -18,12 +18,15 @@ public class solarSystem {
 
         ArrayList<String> planetList = new ArrayList<>(Arrays.asList("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Uranus", "Neptune"));
 
-        putSaturn(planetList);
-        System.out.println(planetList);
+        ;
+        ArrayList into;
+        into = putSaturn(planetList);
+        System.out.println(into);
     }
 
-    public static List putSaturn(List correctPlanets){
+    public static ArrayList putSaturn(ArrayList correctPlanets){
         correctPlanets.add(5,"Saturn");
+
         return correctPlanets;
     }
 
