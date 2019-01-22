@@ -8,7 +8,7 @@ public class reserveList {
         // - Reverse the order of the elements in `aj`
         // - Print the elements of the reversed `aj`
 
-        int[] aj = {3, 4, 5, 6, 7};
+       int[] aj = {3, 4, 5, 6, 7};
         int temp;
         for (int i = 0; i < aj.length / 2; i++) {
             temp = aj[i];
@@ -16,5 +16,5 @@ public class reserveList {
             aj[aj.length - 1 - i] = temp;
         }
         System.out.println(Arrays.toString(aj));
-    }
+}
 }
