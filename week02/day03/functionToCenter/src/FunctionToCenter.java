@@ -1,33 +1,35 @@
-
 import javax.swing.*;
 
 import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class RainbowBoxFunction {
+public class FunctionToCenter {
     public static void mainDraw(Graphics g) {
-        // Create a square drawing function that takes 3 parameters:
-        // The square size, the fill color, graphics
-        // and draws a square of that size and color to the center of the canvas.
-        // Create a loop that fills the canvas with rainbow colored squares.
+        // Create a line drawing function that takes 3 parameters:
+        // The x and y coordinates of the line's starting point and the graphics
+        // and draws a line from that point to the center of the canvas.
+        // Fill the canvas with lines from the edges, every 20 px, to the center.
 
-        int sizeX = 160;
-        Color[] color = {Color.red, Color.blue, Color.yellow,};
-        for (int i = 0; i < color.length; i++) {
-            sizeX -= 16;
-            squareDrawing(sizeX, g, color[i]);
+        int xPos = 0;
+        int yPos = 0;
+        int yPos2 = HEIGHT;
+        int xPos2 = 0;
+
+        while (xPos <= WIDTH) {
+            g.setColor(Color.BLACK);
+            g.drawLine(xPos,yPos,WIDTH/2,HEIGHT/2);
+            g.drawLine(xPos,yPos2,WIDTH/2,HEIGHT/2);
+            xPos += WIDTH/12;
+        }
+        while (yPos <= HEIGHT){
+            g.setColor(Color.BLACK);
+            g.drawLine(xPos,yPos,WIDTH/2,HEIGHT/2);
+            g.drawLine(xPos2,yPos,WIDTH/2,HEIGHT/2);
+            yPos += HEIGHT/12;
         }
 
-
     }
-
-    public static void squareDrawing(int size, Graphics g, Color color) {
-        g.setColor(color);
-        g.fillRect(160 - size / 2, 160 - size / 2, size, size);
-
-    }
-
 
     // Don't touch the code below
     static int WIDTH = 320;
