@@ -21,7 +21,7 @@ public class reverse {
         }
         reversed = something;
         System.out.print(reversed);
-        
+
     }
 
 
