@@ -1,3 +1,4 @@
+import com.sun.deploy.util.ArrayUtil;
 import sun.font.CompositeGlyphMapper;
 
 import java.lang.reflect.Array;
@@ -43,6 +44,30 @@ public class StringCommands {
         valmai.add(2);
         valmai.add(3);
         valmai.add(4);
-        valmai.remove(2); // eltavolitja a harmadik elemet a listabol
+        valmai.add(5);
+        valmai.add(6);
+        valmai.remove(3); // eltavolitja a harmadik elemet a listabol
+
+        // .set( , );
+
+        // tomb elemet kicsereli az uj megadott elemmel valami.set(x.eleme, 8) a valami x.eleme egyenlo lesz 8-al
+
+        //------------------------------------------------
+
+
+
+        // .size()
+
+        // array meretet .size() nezunk hasonlo mint a .lenght
+
+
+        //---------------------------------------------------------
+
+        valmai.isEmpty(); // booleannal ter vissza megvizsgalja a megadott tomb meretet es ha az ures true-val ter vissza
+
+        //----------------------------------------------------------
+
+        valmai.clear(); // torli az adott tomb elemeit
+
     }
 }
