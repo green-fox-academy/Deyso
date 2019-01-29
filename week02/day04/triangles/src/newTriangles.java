@@ -4,30 +4,38 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Checkerboard {
+public class newTriangles {
     public static void mainDraw(Graphics g) {
-        // Fill the canvas with a checkerboard pattern.
+        int fromRightX = 150;
+        int fromLefttX = 150;
+        int fromY = 50;
+        int toX = 50;
+        for (int i = 0; i < 21; i++) {
 
-        int y = 0;
-
-        for (int i = 0; i < 16; i++) {
-            int x = 0;
-            if (i % 2 != 0) {
-                x += 10;
-            }
-            for (int j = 0; j < 16; j++) {
-                g.setColor(Color.BLACK);
-                g.fillRect(x, y, 10, 10);
-                x += 20;
-            }
-            y += 10;
+            drawTheTriangles(fromRightX, fromY, toX, g);
+            fromRightX += 5;
+            fromY += 10;
+            toX += 10;
         }
+    }
+
+    public static void drawTheTriangles(int fromRightX, int FromY, int toX, Graphics g) {
+        g.setColor(Color.BLACK);
+        g.drawLine(fromRightX, FromY, toX, 250);
+
+        int toX2 = 300 - toX;
+        int newRightX = 300 - fromRightX;
+        g.drawLine(newRightX, FromY, toX2, 250);
+
+        g.drawLine(fromRightX, FromY, newRightX, FromY);
+
+
     }
 
 
     // Don't touch the code below
-    static int WIDTH = 320;
-    static int HEIGHT = 320;
+    static int WIDTH = 300;
+    static int HEIGHT = 300;
 
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("Drawing");
@@ -44,7 +52,6 @@ public class Checkerboard {
         @Override
         protected void paintComponent(Graphics graphics) {
             super.paintComponent(graphics);
-
             mainDraw(graphics);
         }
     }

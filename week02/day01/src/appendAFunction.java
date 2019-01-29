@@ -15,9 +15,10 @@ public class appendAFunction {
 
 
     }
-    public static String appendAFunc(String input){
 
-        input = input +"a";
+    public static String appendAFunc(String input) {
+
+        input += "a";
         return input;
     }
 

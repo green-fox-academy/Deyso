@@ -1,16 +1,18 @@
+import java.util.Arrays;
+
 public class appendA {
     public static void main(String[] args) {
         // - Create an array variable named `animals`
         //   with the following content: `["koal", "pand", "zebr"]`
         // - Add all elements an `"a"` at the end
 
-        String [] animals = {"koal","pand","zebr"};
+        String[] animals = {"koal", "pand", "zebr"};
 
-        for (int i = 0; i<animals.length;i++){
+        for (int i = 0; i < animals.length; i++) {
             animals[i] += "a";
-            System.out.println(animals[i]);
 
         }
+        System.out.println(Arrays.toString(animals));
 
     }
 

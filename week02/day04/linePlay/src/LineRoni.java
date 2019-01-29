@@ -4,18 +4,28 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class PurpleSteps {
+public class LineRoni {
     public static void mainDraw(Graphics g) {
+        drawPinkLines(WIDTH / 16, HEIGHT / 16, WIDTH - 20, WIDTH / 8, g, Color.PINK);
+        drawGreenLines(WIDTH / 16, HEIGHT / 8, WIDTH / 8, HEIGHT - 20, g, Color.GREEN);
 
-        drawDiagonal(0, 0, 10, 28, g, Color.PINK, );
     }
 
-    public static void drawDiagonal(int startPosX, int startPosY, int size, int howManyTimes, Graphics g, Color color) {
+    public static void drawPinkLines(int fromPosX, int fromPosY, int toPosX, int toPosY, Graphics g, Color color) {
         g.setColor(color);
-        for (int i = 0; i < howManyTimes; i++) {
-            startPosX += size;
-            startPosY += size;
-            g.fillRect(startPosX, startPosY, size, size);
+        for (int i = 0; i < 14; i++) {
+            g.drawLine(fromPosX, fromPosY, toPosX, toPosY);
+            fromPosX += 20;
+            toPosY += 20;
+        }
+    }
+
+    public static void drawGreenLines(int fromPosX, int fromPosY, int toPosX, int toPosY, Graphics g, Color color) {
+        g.setColor(color);
+        for (int i = 0; i < 14; i++) {
+            g.drawLine(fromPosX, fromPosY, toPosX, toPosY);
+            fromPosY += 20;
+            toPosX += 20;
         }
     }
 
@@ -38,6 +48,7 @@ public class PurpleSteps {
         @Override
         protected void paintComponent(Graphics graphics) {
             super.paintComponent(graphics);
+            this.setBackground(Color.BLACK);
             mainDraw(graphics);
         }
     }

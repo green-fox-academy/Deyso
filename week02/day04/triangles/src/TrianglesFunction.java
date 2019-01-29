@@ -4,30 +4,26 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Checkerboard {
+public class TrianglesFunction {
     public static void mainDraw(Graphics g) {
-        // Fill the canvas with a checkerboard pattern.
 
-        int y = 0;
+        drawingLinesForTriangle(WIDTH / 2, WIDTH / 2, 50, 50, HEIGHT - 50, (((WIDTH + HEIGHT) / 2) - 100) / 10, g, Color.BLACK, 5);
+        //drawingLinesForTriangle(WIDTH / 2, 50, WIDTH-50, HEIGHT - 50, 20, g, Color.BLACK,5);
+    }
 
-        for (int i = 0; i < 16; i++) {
-            int x = 0;
-            if (i % 2 != 0) {
-                x += 10;
-            }
-            for (int j = 0; j < 16; j++) {
-                g.setColor(Color.BLACK);
-                g.fillRect(x, y, 10, 10);
-                x += 20;
-            }
-            y += 10;
+    public static void drawingLinesForTriangle(int fromX, int fromX2, int fromY, int toX, int toY, int howMany, Graphics g, Color color, int set) {
+        g.setColor(color);
+        for (int i = 0; i < 20; i++) {
+            g.drawLine(fromX += set, fromY += 10, toX += 10, toY);
+            System.out.println(fromX);
+            g.drawLine(fromX2 - set*i, fromY, 250 -= 10, toY);
+            System.out.println("secound" + fromX);*/
         }
     }
 
-
     // Don't touch the code below
-    static int WIDTH = 320;
-    static int HEIGHT = 320;
+    static int WIDTH = 300;
+    static int HEIGHT = 300;
 
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("Drawing");
@@ -44,7 +40,6 @@ public class Checkerboard {
         @Override
         protected void paintComponent(Graphics graphics) {
             super.paintComponent(graphics);
-
             mainDraw(graphics);
         }
     }

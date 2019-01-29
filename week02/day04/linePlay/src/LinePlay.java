@@ -20,7 +20,7 @@ public class LinePlay {
         for (int i = 0; i < 14; i++) {
             g.setColor(Color.PINK);
             g.drawLine(purpleFromX,purpleFromY,purpleToX,purpleToY);
-            purpleFromY -=20;
+            purpleFromY = purpleFromY + (- 20);
             purpleToX -=20;
         }
         for (int i = 0; i < 14; i++) {
@@ -52,6 +52,7 @@ public class LinePlay {
         @Override
         protected void paintComponent(Graphics graphics) {
             super.paintComponent(graphics);
+            this.setBackground(Color.BLACK);
             mainDraw(graphics);
         }
     }
