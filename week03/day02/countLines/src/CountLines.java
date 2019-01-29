@@ -11,7 +11,7 @@ public class CountLines {
             List<String> countLines = Files.readAllLines(file);
             System.out.println(countLines.size());
         } catch (Exception ex){
-            System.out.println("Can't open the file");
+            System.err.println("Can't open the file");
         }
 
     }
