@@ -32,6 +32,7 @@ public class Counter {
 
     public void add(int addingNumber) {
         number += addingNumber;
+        return ;
     }
 
 
