@@ -16,7 +16,7 @@ public class PostIt {
     public void tellAbout(){
         System.out.println("My background color is " + backgroundColor + " and the text is " + text + " and the text color is "
         + textColor);
-        
+
     }
 
     }
