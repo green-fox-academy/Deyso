@@ -47,7 +47,7 @@ public class WriteMultipleLines {
         }
         try {
             Path toPath = Paths.get(path);
-            Files.write(toPath,arryString);
+            giles.write(toPath,arryString);
 
         } catch (Exception ex){
 
