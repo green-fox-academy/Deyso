@@ -5,7 +5,7 @@ public class SumDigit {
         // Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while
         // divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
 
-        int sum = sumNums(25);
+        int sum = sumNums(3);
         int percentDivide = sum % 10;
         int divideByTen = sum / 10;
         System.out.println("The sum of the numbers: " + sum);
@@ -15,7 +15,7 @@ public class SumDigit {
 
     public static int sumNums(int n) {
         if (n == 0) {
-            return 1;
+            return 0;
         } else {
             return n + sumNums(n - 1);
         }
