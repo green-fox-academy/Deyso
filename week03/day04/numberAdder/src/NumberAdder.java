@@ -10,8 +10,7 @@ public class NumberAdder {
         System.out.println(n);
         if ( n == 1) {
             return 1;
-        } else {
-            return n + factorialWithRecursion(n-1);
         }
+            return n + factorialWithRecursion(n-1);
     }
 }
