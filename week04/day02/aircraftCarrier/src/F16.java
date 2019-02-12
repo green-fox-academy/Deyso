@@ -10,6 +10,16 @@ public class F16 extends Planes {
     }
 
     @Override
+    public void refill() {
+
+    }
+
+    @Override
+    public void defend() {
+
+    }
+
+    @Override
     public String toString() {
         return super.toString();
     }

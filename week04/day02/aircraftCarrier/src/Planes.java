@@ -1,9 +1,10 @@
-public class Planes {
+public class Planes implements Fightable {
     String type;
     int ammo;
     int damage;
     int maxAmmo;
     boolean priority;
+
 
 
     public int fight() {
@@ -12,6 +13,9 @@ public class Planes {
         System.out.println("Your " + type + " damaged: " + allDamage);
         return allDamage;
     }
+
+    public void refill();
+    public void defend();
 
     public boolean isPriority() {
         if (type == "F16") {

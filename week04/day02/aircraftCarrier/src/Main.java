@@ -10,7 +10,7 @@ public class Main {
         planes.add(new F16());
         planes.add(new F35());
 
-        
+
         for (int i = 0; i < planes.size(); i++) {
         System.out.println(planes.get(i));
 
